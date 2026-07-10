@@ -1,3 +1,4 @@
+
 export interface MessageBroker {
   connectConsumer: () => Promise<void>;
   disconnectConsumer: () => Promise<void>;
