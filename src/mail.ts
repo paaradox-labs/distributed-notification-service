@@ -10,7 +10,7 @@ export class MailTransport implements NotificationTransport {
     this.transporter = nodemailer.createTransport({
         host: config.get("mail.host"),
         port: config.get("mail.port"),
-        secure: false, // use STARTTLS (upgrade connection to TLS after connecting)
+        secure: true, // use STARTTLS (upgrade connection to TLS after connecting)
         auth: {
             user: config.get("mail.auth.user"),
             pass: config.get("mail.auth.pass"),
